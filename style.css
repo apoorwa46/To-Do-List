@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #FFC107;
+    --background-color: #f4f7f6;
+    --card-background: #ffffff;
+    --text-color: #333;
+    --light-text-color: #666;
+    --border-color: #ddd;
+    --hover-color: #45a049;
+    --danger-color: #f44336;
+    --info-color: #2196F3; /* Blue for counters */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-color);
+}
+
+.container {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+.interface {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.headingContainer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.heading {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.todolist {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.writingTab {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.writingTab label {
+    font-size: 1.1em;
+    font-weight: 400;
+    min-width: 120px;
+}
+
+#taskInput {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1em;
+    color: var(--text-color);
+    transition: border-color 0.3s ease;
+}
+
+#taskInput::placeholder {
+    color: var(--light-text-color);
+}
+
+#taskInput:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+/* --- Button Styles --- */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #3e8e41;
+}
+
+#addTaskButton {
+    background-color: var(--primary-color);
+    align-items: center;
+    align-self: center;
+}
+
+#addTaskButton:hover {
+    background-color: var(--hover-color);
+}
+
+#addTaskButton:active {
+    background-color: #3e8e41;
+}
+
+#clearTasksButton {
+    background-color: var(--danger-color);
+    margin-top: 10px;
+}
+
+#clearTasksButton:hover {
+    background-color: #d32f2f;
+}
+
+#clearTasksButton:active {
+    background-color: #c62828;
+}
+
+/* --- Task List Styles --- */
+h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 5px;
+    align-self: flex-start;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    min-height: 80px;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1.1em;
+    color: var(--light-text-color);
+    transition: background-color 0.2s ease;
+}
+
+#taskList li:last-child {
+    border-bottom: none;
+}
+
+#taskList li:hover {
+    background-color: #f9f9f9;
+}
+
+#taskList li.completed {
+    text-decoration: line-through;
+    color: var(--light-text-color);
+    opacity: 0.7;
+}
+
+#taskList li button {
+    background: none;
+    border: none;
+    color: var(--danger-color);
+    font-size: 1.3em;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    box-shadow: none;
+    font-weight: normal;
+}
+
+#taskList li button:hover {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: var(--danger-color);
+    transform: scale(1.1);
+}
+
+#taskList li button:active {
+    background-color: rgba(244, 67, 54, 0.2);
+    transform: scale(1);
+}
+
+/* --- Counter Styles --- */
+.counter-container {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+    font-size: 1.1em;
+    color: var(--light-text-color);
+}
+
+#task-counters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 500;
+}
+
+#completed-counter,
+#uncompleted-counter {
+    font-weight: 600;
+    color: var(--info-color); /* Use info-color for counters */
+    font-size: 1.2em;
+}
+#github, #linkedin, #instagram {
+  color: var(--primary-color);
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+#madeBy {
+    flex-grow: 1;
+    padding: 12px 15px;
+    font-size: 1em;
+    color: var(--primary-color);
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .heading {
+        font-size: 2em;
+    }
+
+    .writingTab {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .writingTab label {
+        align-self: flex-start;
+        margin-bottom: 5px;
+    }
+
+    #taskInput,
+    button {
+        width: 100%;
+    }
+
+    #task-counters {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

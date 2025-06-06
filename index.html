@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="interface">
+            <div class="headingContainer">
+                <h2 class="heading">To-Do List</h2>
+            </div>
+            <div class="todolist">
+                <div class="writingTab">
+                    <label for="taskInput">Add a new task:</label>
+                    <input type="text" id="taskInput" placeholder="Enter task here..." />
+                    <button id="addTaskButton">Add Task</button>
+                </div>
+                <h3 style="align-self: center">Tasks:</h3>
+                <ul id="taskList">
+                    <!-- Tasks will be added here -->
+                </ul>
+                <button id="clearTasksButton">Clear All Tasks</button>
+            </div>
+            <div class="counter-container">
+                <div id="task-counters">
+                    Completed: <span id="completed-counter">0</span> | Uncompleted:
+                    <span id="uncompleted-counter">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="contactme">
+            <h4 id="madeBy">Made by Apoorwa Kumar 😊</h4>
+            <div class="socials">
+                <a id="github" href="https://github.com/apoorwa46">GitHub</a>
+                <a id="linkedin" href="">LinkedIn</a>
+                <a id="instagram" href="https://www.instagram.com/apoorwa466/">Instagram</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
