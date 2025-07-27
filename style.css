@@ -17,7 +17,9 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
+    background-image: url(bcg.jpg);
+    background-size: contain; /* Prevents zooming in */
     display: flex;
     justify-content: center;
     align-items: center;
