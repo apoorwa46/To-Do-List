@@ -5,6 +5,8 @@ import {
   Droppable,
   Draggable,
 } from "@hello-pangea/dnd";
+const API_URL = import.meta.env.VITE_API_URL;
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -29,7 +31,7 @@ function App() {
 
   // ------------------ AUTH ------------------
   const handleSignup = async () => {
-    const res = await fetch("http://localhost:5000/api/auth/signup", {
+    const res = await fetch(`${API_URL}/auth/signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, email, password }),
@@ -47,7 +49,7 @@ function App() {
 
   const handleLogin = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/auth/login", {
+      const res = await fetch(`${API_URL}/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -77,7 +79,7 @@ function App() {
   const fetchTodos = async () => {
     if (!token) return;
     try {
-      const res = await fetch("http://localhost:5000/api/todos", {
+      const res = await fetch(`${API_URL}/todos`, {
         headers: { Authorization: "Bearer " + token },
       });
       const data = await res.json();
@@ -89,7 +91,7 @@ function App() {
 
   const addTodo = async () => {
     if (!newTodo.trim()) return;
-    await fetch("http://localhost:5000/api/todos", {
+    await fetch(`${API_URL}/todos`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -102,7 +104,7 @@ function App() {
   };
 
   const deleteTodo = async (id) => {
-    await fetch(`http://localhost:5000/api/todos/${id}`, {
+    await fetch(`${API_URL}/todos/${id}`, {
       method: "DELETE",
       headers: { Authorization: "Bearer " + token },
     });
@@ -110,7 +112,7 @@ function App() {
   };
 
   const toggleComplete = async (id, completed) => {
-    await fetch(`http://localhost:5000/api/todos/${id}`, {
+    await fetch(`${API_URL}/todos/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -141,7 +143,7 @@ function App() {
   };
 
   const saveEdit = async (id) => {
-    await fetch(`http://localhost:5000/api/todos/${id}`, {
+    await fetch(`${API_URL}/todos/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
