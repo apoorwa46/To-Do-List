@@ -272,17 +272,17 @@ function App() {
           <h2 className="text-lg font-semibold mb-4 text-blue-300">My Projects</h2>
           <ul className="space-y-3 text-sm">
             <li>
-              <a href="https://github.com/yourusername/project1" className="block p-2 rounded bg-gray-700 hover:bg-blue-600 transition">
+              <a href="https://my-portfolio-website-seven-lemon.vercel.app/" className="block p-2 rounded bg-gray-700 hover:bg-blue-600 transition">
                 📚 My Portfolio
               </a>
             </li>
             <li>
-              <a href="https://github.com/yourusername/project2" className="block p-2 rounded bg-gray-700 hover:bg-blue-600 transition">
+              <a href="https://blog-platform-gamma-seven.vercel.app/" className="block p-2 rounded bg-gray-700 hover:bg-blue-600 transition">
                 📝 BlogApp
               </a>
             </li>
             <li>
-              <a href="https://github.com/yourusername/project3" className="block p-2 rounded bg-gray-700 hover:bg-blue-600 transition">
+              <a href="https://github.com/apoorwa46/aznProdSum" className="block p-2 rounded bg-gray-700 hover:bg-blue-600 transition">
                 📊 AmazonProductSummarizer
               </a>
             </li>
@@ -403,9 +403,9 @@ function App() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center p-4 text-sm text-gray-400">
           <p>© {new Date().getFullYear()} My To-Do App. All rights reserved.</p>
           <div className="space-x-4">
-            <a href="https://github.com/yourusername" className="hover:text-blue-400">GitHub</a>
-            <a href="https://linkedin.com/in/yourusername" className="hover:text-blue-400">LinkedIn</a>
-            <a href="https://twitter.com/yourusername" className="hover:text-blue-400">Twitter</a>
+            <a href="https://github.com/apoorwa46" className="hover:text-blue-400">GitHub</a>
+            <a href="https://www.linkedin.com/in/apoorwa-kumar-479461302/" className="hover:text-blue-400">LinkedIn</a>
+            <a href="https://x.com/apoorwa466" className="hover:text-blue-400">Twitter</a>
           </div>
         </div>
       </footer>
